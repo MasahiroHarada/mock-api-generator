@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="complete">
-    <h2>Successfully created your mock API!</h2>
+    <h2>Successfully generated your mock API!</h2>
     <div class="form-part">
       <label>URL</label>
       <textarea readonly class="unresizable" rows="2" cols="40" :value="url"></textarea>
@@ -14,7 +14,7 @@
       <button
         type="button"
         class="btn"
-        @click="onBackToHomeClick">back to home</button>
+        @click="onBackToHomeClick">back</button>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
   props: [
     'url',
     'apiKey',
-    'backToHome'
+    'onBackToHomeClick'
   ]
 }
 </script>

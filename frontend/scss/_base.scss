@@ -26,16 +26,15 @@ canvas {
 .panel {
   position: absolute;
   z-index: 100;
-  top: 40%;
+  top: 48%;
   left: 50%;
   width: $content-width;
-  height: $content-width;
   margin: $content-width / -2 0 0 $content-width / -2;
 }
 
 h1 {
   font-family: $title-font;
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-align: center;
   margin: 0;
   margin-bottom: 3rem;

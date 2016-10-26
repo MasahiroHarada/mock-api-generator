@@ -17,7 +17,7 @@
         <button
           type="button" name="button"
           class="btn"
-          @click="create">create mock api</button>
+          @click="create">generate</button>
       </div>
     </form>
   </div>

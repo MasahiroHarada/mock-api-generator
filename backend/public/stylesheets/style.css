@@ -36,15 +36,14 @@ canvas {
 .panel {
   position: absolute;
   z-index: 100;
-  top: 40%;
+  top: 48%;
   left: 50%;
-  width: 580px;
-  height: 580px;
-  margin: -290px 0 0 -290px; }
+  width: 640px;
+  margin: -320px 0 0 -320px; }
 
 h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-align: center;
   margin: 0;
   margin-bottom: 3rem;
@@ -55,11 +54,10 @@ h2 {
   margin-bottom: 2rem; }
 
 .form-part {
-  width: 580px;
-  margin: 1.5rem 0; }
+  width: 640px;
+  margin: 2rem 0; }
   .form-part.form-part-btn {
-    text-align: center;
-    margin-top: 2rem; }
+    text-align: center; }
 
 input[type=text], textarea {
   font-family: "Roboto Mono", sans-serif;
@@ -124,7 +122,7 @@ input[type=checkbox]:checked + label:after {
 
 .btn {
   border: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   margin: 0 1rem;
   background-color: #FE4CFE;
   color: white;

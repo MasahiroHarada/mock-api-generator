@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="loading">
-    <h2>Now creating your API...</h2>
+    <h2>Now generating your API...</h2>
     <div class="loading-icon">
       <div id="bowlG">
         <div id="bowl_ringG">

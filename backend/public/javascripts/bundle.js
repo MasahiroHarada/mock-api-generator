@@ -70,7 +70,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1", __vue__options__)
   } else {
-    hotAPI.reload("data-v-1", __vue__options__)
+    hotAPI.rerender("data-v-1", __vue__options__)
   }
 })()}
 },{"./Complete.vue":2,"./Loading.vue":3,"./MockForm.vue":4,"vue":10,"vue-hot-reload-api":8}],2:[function(require,module,exports){
@@ -85,14 +85,14 @@ exports.default = {
     return {};
   },
 
-  props: ['url', 'apiKey', 'backToHome']
+  props: ['url', 'apiKey', 'onBackToHomeClick']
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',{attrs:{"id":"complete"}},[_m(0)," ",_h('div',{staticClass:"form-part"},[_m(1)," ",_h('textarea',{staticClass:"unresizable",attrs:{"readonly":"","rows":"2","cols":"40"},domProps:{"value":url}})])," ",(apiKey)?_h('div',{staticClass:"form-part"},[_m(2)," ",_h('input',{attrs:{"type":"text","readonly":""},domProps:{"value":apiKey}})]):_e()," ",_h('div',{staticClass:"form-part form-part-btn"},[(!apiKey)?_h('a',{staticClass:"btn",attrs:{"href":url,"target":"_blank"}},["try api"]):_e()," ",_h('button',{staticClass:"btn",attrs:{"type":"button"},on:{"click":onBackToHomeClick}},["back to home"])])])}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('h2',["Successfully created your mock API!"])}},function(){with(this){return _h('label',["URL"])}},function(){with(this){return _h('label',["API Key"])}}]
+__vue__options__.render = function(){with(this){return _h('div',{attrs:{"id":"complete"}},[_m(0)," ",_h('div',{staticClass:"form-part"},[_m(1)," ",_h('textarea',{staticClass:"unresizable",attrs:{"readonly":"","rows":"2","cols":"40"},domProps:{"value":url}})])," ",(apiKey)?_h('div',{staticClass:"form-part"},[_m(2)," ",_h('input',{attrs:{"type":"text","readonly":""},domProps:{"value":apiKey}})]):_e()," ",_h('div',{staticClass:"form-part form-part-btn"},[(!apiKey)?_h('a',{staticClass:"btn",attrs:{"href":url,"target":"_blank"}},["try api"]):_e()," ",_h('button',{staticClass:"btn",attrs:{"type":"button"},on:{"click":onBackToHomeClick}},["back"])])])}}
+__vue__options__.staticRenderFns = [function(){with(this){return _h('h2',["Successfully generated your mock API!"])}},function(){with(this){return _h('label',["URL"])}},function(){with(this){return _h('label',["API Key"])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -100,7 +100,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4", __vue__options__)
+    hotAPI.reload("data-v-4", __vue__options__)
   }
 })()}
 },{"vue":10,"vue-hot-reload-api":8}],3:[function(require,module,exports){
@@ -120,15 +120,15 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function(){with(this){return _m(0)}}
-__vue__options__.staticRenderFns = [function(){with(this){return _h('div',{attrs:{"id":"loading"}},[_h('h2',["Now creating your API..."])," ",_h('div',{staticClass:"loading-icon"},[_h('div',{attrs:{"id":"bowlG"}},[_h('div',{attrs:{"id":"bowl_ringG"}},[_h('div',{staticClass:"ball_holderG"},[_h('div',{staticClass:"ballG"})])])])])])}}]
+__vue__options__.staticRenderFns = [function(){with(this){return _h('div',{attrs:{"id":"loading"}},[_h('h2',["Now generating your API..."])," ",_h('div',{staticClass:"loading-icon"},[_h('div',{attrs:{"id":"bowlG"}},[_h('div',{attrs:{"id":"bowl_ringG"}},[_h('div',{staticClass:"ball_holderG"},[_h('div',{staticClass:"ballG"})])])])])])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2", __vue__options__)
+    hotAPI.createRecord("data-v-3", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2", __vue__options__)
+    hotAPI.rerender("data-v-3", __vue__options__)
   }
 })()}
 },{"vue":10,"vue-hot-reload-api":8}],4:[function(require,module,exports){
@@ -199,16 +199,16 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function(){with(this){return _h('div',{attrs:{"id":"mock-form"}},[(error)?_h('p',{staticClass:"error"},[_s(error)]):_e()," ",_h('form',[_h('div',{staticClass:"form-part"},[_h('textarea',{directives:[{name:"model",rawName:"v-model",value:(body),expression:"body"}],attrs:{"name":"mock-body","rows":"12","cols":"40","placeholder":"response body (application/json)"},domProps:{"value":_s(body)},on:{"input":function($event){if($event.target.composing)return;body=$event.target.value}}})," ",(jsonError)?_h('p',{staticClass:"error"},[_s(jsonError)]):_e()])," ",_h('div',{staticClass:"form-part"},[_h('input',{directives:[{name:"model",rawName:"v-model",value:(isAuth),expression:"isAuth"}],attrs:{"type":"checkbox","name":"mock-is-auth","id":"mock-is-auth"},domProps:{"checked":Array.isArray(isAuth)?_i(isAuth,null)>-1:_q(isAuth,true)},on:{"change":function($event){var $$a=isAuth,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_i($$a,$$v);if($$c){$$i<0&&(isAuth=$$a.concat($$v))}else{$$i>-1&&(isAuth=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{isAuth=$$c}}}})," ",_m(0)])," ",_h('div',{staticClass:"form-part form-part-btn"},[_h('button',{staticClass:"btn",attrs:{"type":"button","name":"button"},on:{"click":create}},["create mock api"])])])])}}
+__vue__options__.render = function(){with(this){return _h('div',{attrs:{"id":"mock-form"}},[(error)?_h('p',{staticClass:"error"},[_s(error)]):_e()," ",_h('form',[_h('div',{staticClass:"form-part"},[_h('textarea',{directives:[{name:"model",rawName:"v-model",value:(body),expression:"body"}],attrs:{"name":"mock-body","rows":"12","cols":"40","placeholder":"response body (application/json)"},domProps:{"value":_s(body)},on:{"input":function($event){if($event.target.composing)return;body=$event.target.value}}})," ",(jsonError)?_h('p',{staticClass:"error"},[_s(jsonError)]):_e()])," ",_h('div',{staticClass:"form-part"},[_h('input',{directives:[{name:"model",rawName:"v-model",value:(isAuth),expression:"isAuth"}],attrs:{"type":"checkbox","name":"mock-is-auth","id":"mock-is-auth"},domProps:{"checked":Array.isArray(isAuth)?_i(isAuth,null)>-1:_q(isAuth,true)},on:{"change":function($event){var $$a=isAuth,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_i($$a,$$v);if($$c){$$i<0&&(isAuth=$$a.concat($$v))}else{$$i>-1&&(isAuth=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{isAuth=$$c}}}})," ",_m(0)])," ",_h('div',{staticClass:"form-part form-part-btn"},[_h('button',{staticClass:"btn",attrs:{"type":"button","name":"button"},on:{"click":create}},["generate"])])])])}}
 __vue__options__.staticRenderFns = [function(){with(this){return _h('label',{attrs:{"for":"mock-is-auth"}},["authenticate with API key"])}}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3", __vue__options__)
+    hotAPI.createRecord("data-v-2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3", __vue__options__)
+    hotAPI.rerender("data-v-2", __vue__options__)
   }
 })()}
 },{"vue":10,"vue-hot-reload-api":8}],5:[function(require,module,exports){
