@@ -1,0 +1,17 @@
+{
+  "name": "jsonapimock-public",
+  "authors": [
+    "Masahiro Harada <poe.422@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,91 @@
+.form-part {
+  width: $content-width;
+  margin: 1.5rem 0;
+  &.form-part-btn {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+input[type=text], textarea {
+  font-family: $input-font;
+  font-size: $input-font-size;
+  border: 0;
+  background-color: $form-bg-color;
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  outline: 0;
+  color: white;
+  transition: .5s;
+  &:focus {
+    background-color: $form-bg-color-focused;
+  }
+}
+
+textarea.unresizable {
+  resize: none;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + label {
+  position: relative;
+  display: inline-block;
+  margin-right: 24px;
+  line-height: 30px;
+  cursor: pointer;
+  padding: 0 0 0 36px;
+}
+input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  background: $form-bg-color;
+}
+input[type=checkbox]:checked + label:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  left: 6px;
+  width: 18px;
+  height: 9px;
+  margin-top: -8px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.error {
+  color: red;
+}
+
+.btn {
+  border: 0;
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  background-color: $btn-color;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    background-color: $btn-color-hovered;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+}

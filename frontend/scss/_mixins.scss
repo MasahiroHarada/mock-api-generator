@@ -1,0 +1,10 @@
+/**
+ * Mixins
+ */
+
+@mixin gradient($deg, $start-color, $end-color)
+{
+  background: $start-color;
+  background: -webkit-linear-gradient($deg, $start-color, $end-color);
+  background: linear-gradient($deg, $start-color, $end-color);
+}
